@@ -7,6 +7,6 @@ public class SceneMove : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("testScene");
     }
 }
