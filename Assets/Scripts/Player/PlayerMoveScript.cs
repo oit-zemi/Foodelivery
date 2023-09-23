@@ -6,8 +6,7 @@ public class PlayerMoveScript : MonoBehaviour
 {
     private Rigidbody2D rbody2D;
 
-    private Vector3 jumpForce1 = new Vector3(0.0f, 15000.0f, 0.0f);
-    private Vector3 jumpForce2 = new Vector3(0.0f, 20000.0f, 0.0f);
+    public Vector3 jumpForce = new Vector3(0.0f, 12000f, 0.0f);
 
     private int jumpCount = 0;
 
@@ -21,8 +20,8 @@ public class PlayerMoveScript : MonoBehaviour
         if (Input.GetKeyDown("space") && this.jumpCount < 2)
         {
             jumpCount++;
-            if (jumpCount == 2) this.rbody2D.AddForce(jumpForce2);
-            else this.rbody2D.AddForce(jumpForce1);
+            rbody2D.velocity = Vector3.zero;
+            this.rbody2D.AddForce(jumpForce);
         }
     }
 
