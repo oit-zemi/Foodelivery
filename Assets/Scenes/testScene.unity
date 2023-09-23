@@ -410,8 +410,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930129118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 364, y: 21, z: 48.249}
-  m_LocalScale: {x: 478.92197, y: 248.93507, z: 45.256805}
+  m_LocalPosition: {x: 289.3136, y: 21, z: 48.249}
+  m_LocalScale: {x: 628.2977, y: 248.93507, z: 45.256805}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -543,8 +543,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005704994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 198.35999, y: 182.112, z: 48.249}
-  m_LocalScale: {x: 8.033082, y: 8.033082, z: 8.033082}
+  m_LocalPosition: {x: 198.35999, y: 168.1627, z: 48.249}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -562,10 +562,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 100
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -634,6 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63467f4dfcfc8df42bbe0fd094c5b9a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: {x: 0, y: 2000000, z: 0}
 --- !u!114 &1005705000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,8 +647,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d66545fbf52ec4e99ea8da607d5cf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: 21300000, guid: d647be0e62bd4304db56813203f967b8, type: 3}
+  idleImage: {fileID: 21300000, guid: d647be0e62bd4304db56813203f967b8, type: 3}
   jumpImage: {fileID: 21300000, guid: ff8bd852ca766bb479b9c104a3eda518, type: 3}
+  idleImage_Pizza1: {fileID: 21300000, guid: 3b07aee141a2f3943a23f3bd639e1059, type: 3}
+  idleImage_Pizza2: {fileID: 21300000, guid: 0cab99bdd59b7244e85b590b8268463c, type: 3}
+  idleImage_Pizza3: {fileID: 21300000, guid: 39dad19a24a834745a6950c0d5af9d46, type: 3}
+  jumpImage_Pizza1: {fileID: 21300000, guid: 9312ffb8864f9a249a053f67c4861a18, type: 3}
+  jumpImage_Pizza2: {fileID: 21300000, guid: 070d2588f4df7cc4db51b545a8fe5edf, type: 3}
+  jumpImage_Pizza3: {fileID: 21300000, guid: e2c4c37b4cdbe114190e812941733501, type: 3}
 --- !u!1 &1059692562
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,7 +856,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &1214362108
 CanvasRenderer:
   m_ObjectHideFlags: 0

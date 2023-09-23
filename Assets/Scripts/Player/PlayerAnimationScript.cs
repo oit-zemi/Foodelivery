@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class PlayerAnimationScript : MonoBehaviour
 {
-    public Sprite defaultImage;
+    public Sprite idleImage;
     public Sprite jumpImage;
+
+    public Sprite idleImage_Pizza1;
+    public Sprite idleImage_Pizza2;
+    public Sprite idleImage_Pizza3;
+
+    public Sprite jumpImage_Pizza1;
+    public Sprite jumpImage_Pizza2;
+    public Sprite jumpImage_Pizza3;
+
+    private int PizzaCount = 0;
+
     SpriteRenderer sr;
 
     void Start()
@@ -18,7 +29,20 @@ public class PlayerAnimationScript : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            sr.sprite = jumpImage;
+            switch(PizzaCount) {
+                case 0:
+                    sr.sprite = jumpImage;
+                    break;
+                case 1:
+                    sr.sprite = jumpImage_Pizza1;
+                    break;
+                case 2:
+                    sr.sprite = jumpImage_Pizza2;
+                    break;
+                default:
+                    sr.sprite = jumpImage_Pizza3;
+                    break;
+            }
         }
     }
 
@@ -26,7 +50,20 @@ public class PlayerAnimationScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("floor"))
         {
-            sr.sprite = defaultImage;
+            switch(PizzaCount) {
+                case 0:
+                    sr.sprite = idleImage;
+                    break;
+                case 1:
+                    sr.sprite = idleImage_Pizza1;
+                    break;
+                case 2:
+                    sr.sprite = idleImage_Pizza2;
+                    break;
+                default:
+                    sr.sprite = idleImage_Pizza3;
+                    break;
+            }
         }
     }
 }
